@@ -7,10 +7,15 @@
 - Vectors store the elements in a strict linear sequence.
 - They provide blazing fast access to elements using pointer arithmetics.
 
+## Initialization
+
+- `vector <int> v = {v1,v2,v3,...}` : Initialize vector with values v1, v2, v3, ...
+- `vector <int> v(cap, val)` : Initialize vector with capacity of `cap` filled with `val`
+
 ## Iterators
 
 - `begin()` : start of the vector
-- `end`() : end of the vector
+- `end()` : end of the vector
 - `rbegin()` : reverse begin
 - `rend()` : reverse end
 
@@ -31,7 +36,7 @@
 
 - `assign(m, n)` : reset the array and fill it with `n` , `m` times
 - `push_back(n)` : adds `n` to end of the vector
-- `pop_back()` : removes element from last of vector and returns it
+- `pop_back()` : removes element from last of vector
 - `insert(pos, val)` : Adds element `val` before the element of specified position `pos`
 - `clear()` : clears all the elements inside a vector
 - `erase(startring_pos, ending_pos)` : erases element/range of elements. here `starting_pos` and `ending_pos` are iterators
