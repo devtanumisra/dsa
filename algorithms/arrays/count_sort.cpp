@@ -1,23 +1,25 @@
 #include <bits/stdc++.h>
+#pragma optimize("Ofast")
+#define endl "\n"
 using namespace std;
 
-vector<int> bubble_sort(vector<int> v) {
-  int t;
-  for (int i = 0; i < v.size(); i++) {
-    for (int j = 0; j < v.size() - i - 1; j++) {
-      if(v[j] > v[j+1]) {
-        t = v[j];
-        v[j] = v[j+1];
-        v[j+1] = t;
-      }
+vector<int> count_sort(vector<int> v) {
+  vector<int> z(100, 0);
+  for(auto a : v) {
+      z[a]++;
+  }
+  v.clear();
+  for (int i = 0; i < z.size(); ++i) {
+    for (int j = 0; j < z[i]; ++j) {
+      v.push_back(i);
     }
   }
   return v;
-}
+} 
 
 int main() {
     vector<int> v;
-    int n, input;
+    int n, t, input;
     cout << "Enter N : ";
     cin >> n;
     for(int i = 0; i < n; i++) {
@@ -25,7 +27,7 @@ int main() {
       cin >> input;
       v.push_back(input);
     }
-    v = bubble_sort(v);
+    v = count_sort(v);
     for(auto x :  v) {
       cout << x << " ";
     }
