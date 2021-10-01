@@ -178,10 +178,7 @@ void display(double_link *head)
 int main()
 {
 
-#ifndef ONLINE_JUDGE
-    freopen("C:\\Users\\UDIT KATYAL\\Desktop\\DSA\\input.txt", "r", stdin);
-    freopen("C:\\Users\\UDIT KATYAL\\Desktop\\DSA\\output.txt", "w", stdout);
-#endif
+
 
     double_link *head = NULL;
 
